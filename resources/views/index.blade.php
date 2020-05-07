@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1>Projects</h1>
+@extends('layout')
+
+@section('content')>
+<h1>Projects</h1>
 
 
-	@foreach($projects as $project)
-		<li>{{ $project->title }}</li>
-	@endforeach
+@foreach($projects as $project)
+<li>{{ $project->title }}</li>
+@endforeach
 
-
-</body>
-</html>
+@endsection

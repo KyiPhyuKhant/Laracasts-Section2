@@ -31,8 +31,12 @@ Route::get('/', function () {
 Route::resource('/projects', 'ProjectsController');
 // Route::get('/projects', 'ProjectsController@index');
 // Route::get('/projects/create', 'ProjectsController@create');
-// Route::post('/projects/{project}', 'ProjectsController@show');
+// Route::get('/projects/{project}', 'ProjectsController@show');
 // Route::post('/projects', 'ProjectsController@store');
 // Route::get('/projects/{project}/edit', 'ProjectsController@edit');
 // Route::patch('/projects/{project}', 'ProjectsController@update');
 // Route::delete('/projects/{project}', 'ProjectsController@destroy');
+
+
+Route::post('/project/{project}/{task}', 'ProjectTasksController@store');
+Route::patch('/tasks/{task}', 'ProjectTasksController@update');
